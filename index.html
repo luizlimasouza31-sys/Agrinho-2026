@@ -214,6 +214,12 @@ html {
     -webkit-font-smoothing: antialiased;
 }
 
+/* 1. Suaviza o scroll e a renderização */
+html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+}
+
 /* 2. Suaviza a movimentação de TODOS os elementos interativos */
 /* O uso de cubic-bezier cria um movimento de aceleração/desaceleração natural */
 .card, .cta-btn, header, footer, h1, p {
@@ -245,4 +251,28 @@ body {
 /* 5. Deixa o clique no botão menos "seco" */
 .cta-btn:active {
     transform: scale(0.95);
+}/* Remove o scroll nativo "duro" para dar lugar ao fluido */
+html.lenis, html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
+
+/* Suaviza a resposta visual de todos os elementos interativos */
+* {
+    transition: background-color 0.3s ease, transform 0.3s cubic-bezier(0.2, 0, 0.2, 1), box-shadow 0.3s ease;
 }

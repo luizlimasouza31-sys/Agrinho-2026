@@ -165,115 +165,13 @@
 </html>
 <html lang="pt-br">
 <head>
-&nbsp;&nbsp;&nbsp;&nbsp;<meta charset="UTF-8">
-&nbsp;&nbsp;&nbsp;&nbsp;<meta name="viewport" content="width=device-width, initial-scale=1.0">
-&nbsp;&nbsp;&nbsp;&nbsp;<title>AgroSustentável | Futuro e Equilíbrio</title>
-&nbsp;&nbsp;&nbsp;&nbsp;<style>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/* Estilos Globais */
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* {
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;margin: 0;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;padding: 0;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;box-sizing: border-box;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
-        body {
-            line-height: 1.6;
-            color: #333;
-            background-color: #f4f9f4;
-        }
-        /* Cabeçalho */
-        header {
-            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1350&q=80');
-            background-size: cover;
-            background-position: center;
-            height: 60vh;
-            color: white;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            padding: 20px;
-        }
-        header h1 {
-            font-size: 3rem;
-            margin-bottom: 10px;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-        }
-        header p {
-            font-size: 1.2rem;
-            max-width: 700px;
-        }
-        /* Seção de Incentivo */
-        .container {
-            max-width: 1100px;
-            margin: 40px auto;
-            padding: 20px;
-        }
-        .section-title {
-            text-align: center;
-            color: #2d5a27;
-            margin-bottom: 40px;
-        }
-        /* Grid de Reciclagem */
-        .recycle-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-        }
-        .card {
-            background: white;
-            padding: 30px;
-            border-radius: 15px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-            text-align: center;
-            transition: transform 0.3s ease;
-            border-bottom: 5px solid transparent;
-        }
-        .card:hover {
-            transform: translateY(-10px);
-        }
-        .card.organico { border-color: #8b4513; }
-        .card.reciclavel { border-color: #2196F3; }
-        .card.agro { border-color: #4CAF50; }
-        .card i {
-            font-size: 3rem;
-            display: block;
-            margin-bottom: 15px;
-        }
-        h3 { margin-bottom: 15px; color: #333; }
-        /* Rodapé */
-        footer {
-            background: #2d5a27;
-            color: white;
-            text-align: center;
-            padding: 30px;
-            margin-top: 50px;
-        }
-        /* Botão de Ação */
-        .cta-btn {
-            display: inline-block;
-            background: #4CAF50;
-            color: white;
-            padding: 12px 30px;
-            text-decoration: none;
-            border-radius: 25px;
-            margin-top: 20px;
-            font-weight: bold;
-        }
-        .cta-btn:hover {
-            background: #45a049;
-        }
-    </style>
-</head>
-<body>
-<!DOCTYPE html>
+    <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AgroSustentável | Futuro e Equilíbrio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <style>
         /* Estilos Globais */
         * {
@@ -316,7 +214,7 @@
             max-width: 700px;
         }
 
-        /* Seção de Incentivo */
+        /* Seção de Conteúdo */
         .container {
             max-width: 1100px;
             margin: 40px auto;
@@ -329,11 +227,11 @@
             margin-bottom: 40px;
         }
 
-        /* Grid de Reciclagem */
+        /* Grid de Cards */
         .recycle-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
         }
 
         .card {
@@ -347,4 +245,98 @@
         }
 
         .card:hover {
-            transform: translateY(-10px    
+            transform: translateY(-10px);
+        }
+
+        /* Cores Temáticas dos Cards */
+        .card.organico { border-color: #8b4513; }
+        .card.reciclavel { border-color: #2196F3; }
+        .card.agro { border-color: #4CAF50; }
+
+        .card i {
+            font-size: 3rem;
+            display: block;
+            margin-bottom: 15px;
+        }
+
+        .card.organico i { color: #8b4513; }
+        .card.reciclavel i { color: #2196F3; }
+        .card.agro i { color: #4CAF50; }
+
+        h3 { margin-bottom: 15px; color: #333; }
+
+        /* Botão de Ação */
+        .cta-btn {
+            display: inline-block;
+            background: #4CAF50;
+            color: white;
+            padding: 12px 30px;
+            text-decoration: none;
+            border-radius: 25px;
+            margin-top: 20px;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        .cta-btn:hover {
+            background: #45a049;
+        }
+
+        /* Rodapé */
+        footer {
+            background: #2d5a27;
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Agro Forte, Futuro Sustentável</h1>
+        <p>O equilíbrio entre a produção e a preservação começa na nossa atitude diária. Cultive o hábito de cuidar do que sobra para colher um amanhã melhor.</p>
+    </header>
+
+    <div class="container">
+        <h2 class="section-title">Como fazer a sua parte?</h2>
+        
+        <div class="recycle-grid">
+            <div class="card organico">
+                <i class="fas fa-apple-whole"></i>
+                <h3>Resíduos Orgânicos</h3>
+                <p>Restos de alimentos e cascas. No campo, isso vira <strong>adubo orgânico</strong> através da compostagem, enriquecendo o solo naturalmente.</p>
+                <p style="margin-top: 15px; color: #8b4513; font-weight: bold;">Destino: Lixeira Marrom</p>
+            </div>
+
+            <div class="card reciclavel">
+                <i class="fas fa-recycle"></i>
+                <h3>Recicláveis Seletivos</h3>
+                <p>Papel, plástico, metal e vidro. A reciclagem reduz a extração de recursos e evita a poluição de rios e matas.</p>
+                <p style="margin-top: 15px; color: #2196F3; font-weight: bold;">Destino: Lixeiras Coloridas</p>
+            </div>
+
+            <div class="card agro">
+                <i class="fas fa-tractor"></i>
+                <h3>Produção Consciente</h3>
+                <p>O agro moderno usa tecnologia para preservar nascentes e otimizar o uso da terra. Sustentabilidade é o nosso melhor insumo.</p>
+                <a href="#" class="cta-btn">Saiba Mais</a>
+            </div>
+        </div>
+
+        <section style="margin-top: 60px; text-align: center;">
+            <h2 style="color: #2d5a27;">Por que reciclar?</h2>
+            <p style="max-width: 800px; margin: 20px auto; font-size: 1.1rem; color: #555;">
+                Cada tonelada de papel reciclado preserva cerca de 20 árvores. No agronegócio, o manejo correto de resíduos protege o lençol freático, garantindo solo fértil para as próximas gerações.
+            </p>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 AgroSustentável - Tecnologia a favor do Meio Ambiente</p>
+        <p style="opacity: 0.8; margin-top: 10px;"><small>Transformando resíduos em futuro.</small></p>
+    </footer>
+
+</body>
+</html>

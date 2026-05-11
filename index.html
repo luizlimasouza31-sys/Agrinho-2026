@@ -208,4 +208,41 @@
 
     from { opacity: 0; }
     to { opacity: 1; }
+/* 1. Suaviza o scroll e a renderização */
+html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+}
 
+/* 2. Suaviza a movimentação de TODOS os elementos interativos */
+/* O uso de cubic-bezier cria um movimento de aceleração/desaceleração natural */
+.card, .cta-btn, header, footer, h1, p {
+    transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1) !important;
+}
+
+/* 3. Efeito de flutuação suave nos cards ao passar o mouse */
+.card:hover {
+    transform: translateY(-12px) scale(1.02);
+    box-shadow: 0 20px 30px rgba(0,0,0,0.15) !important;
+}
+
+/* 4. Suaviza a entrada da página (Fade suave) */
+@keyframes slideUpFade {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+body {
+    animation: slideUpFade 1.2s ease-out;
+}
+
+/* 5. Deixa o clique no botão menos "seco" */
+.cta-btn:active {
+    transform: scale(0.95);
+}

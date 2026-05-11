@@ -205,4 +205,22 @@
             <a href="#"><i class="fab fa-instagram"></i></a>
             <a href="#"><i class="fab fa-facebook"></i></a>
             <a href
- 
+ /* Navegação Suave */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Transições de Interação (Suaviza o hover de botões e cards) */
+a, .card, .cta-btn {
+    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+/* Efeito de fade-in ao carregar a página (opcional) */
+body {
+    animation: fadeIn 1s ease-in;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
